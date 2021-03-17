@@ -3,15 +3,37 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Week 2 Project</title>
-  <meta name="description" content="Week 2 Project">
+  <title>Astrología de cada día</title>
+  <meta name="description" content="Astrología de cada día">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   
-  
+  <div class="wrapper">
+  <div>
+  <p>Enter your details to below to see your results!</p>
+</div>
+
+  <form>
+    <div>
+    <label for="starsign">Your sign</label>
+    <input id="starsign" type="text">
+  </div>
+
+  <div>
+    <label for="day">Choose your reading for a specific day</label>
+    <select id="day">
+      <option value="today">Today</option>
+      <option value="tomorrow">Tomorrow</option>
+      <option value="yesterday">Yesterday</option>
+
+    </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
   
   
   <script src="scripts.js"></script>
