@@ -9,3 +9,4 @@ fetch(URL, {
     const date = json.current_date;
     console.log(date);
 });
+g
