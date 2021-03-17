@@ -20,7 +20,7 @@ fetch(URL, {
     return response.json()
 })
 .then(json => { 
-    document.getElementById("testp").innerHTML = `Your lucky time ${day} is ${json.lucky_time}, and your lucky number is ${json.lucky_number}`
+    document.getElementById("testp").innerHTML = `Your lucky time is ${json.lucky_time}, and your lucky number is ${json.lucky_number}`
     console.log(json.lucky_time);
     console.log(json.lucky_number);
     console.log(json.mood);
