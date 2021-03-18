@@ -150,6 +150,10 @@ html {
     }
 }
 
+#giphy {
+    height: 200px;
+}
+
 /* Twinkle twinkle */
 
 #star-container {
