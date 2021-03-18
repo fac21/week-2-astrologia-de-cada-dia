@@ -87,7 +87,18 @@ html {
     width: 300px;
     z-index: 2;
   }
-  
+
+  /* Styling for button */
+
+  button{
+    border-radius: 1rem;
+    padding:0.5rem;
+  }
+
+  button:hover{
+    background-color:rgb(21,62,118);
+    color:white;
+  }
   /* Styling for output */
 
   /* .output {
@@ -112,7 +123,7 @@ html {
     height: 90%;
     border-radius: 5%;
     width: 50vw;
-    background-color: rgba(202,240,248, 0.95);
+    background-color: rgb(174,224,241);
     background-size: cover;
     z-index: 3;
     color: rgb(0,48,73);

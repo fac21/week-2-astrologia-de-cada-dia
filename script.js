@@ -87,6 +87,7 @@ fetch(URL, {
     })
     .catch((error) => console.error(error));
 // Second fetch will go here
+
 const data2 = ;
 fetch(URL2, {
    method: 'POST',
@@ -102,3 +103,4 @@ fetch(URL2, {
 })
 
 });
+
