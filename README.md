@@ -6,18 +6,20 @@ Blow 'em away
 
 ---
 
-## Planning 
+## User Journey 
 
-
-
-
-
+We decided to create a website for a user to input their date of birth and receive a horoscope reading.From the data they receive they will get a giphy image in the output.
 
 ---
 
 ## API 1
 We searched for Horescope API and came accross [Rapid API](https://rapidapi.com/sameer.kumar/api/aztro/endpoints) which had [aztro](https://github.com/sameerkumar18/aztro)- The astrology API.
 
+---
+
+## API 2
+
+We had lots of trouble accessing our chosen second API [](https://rapidapi.com/astronomyapi-astronomyapi-default/api/astronomy) we chose required a URL. The github pages URL was not acceptable, so we tried using a custom domain. That didn't work and so we had trouble reverting that change. Finally we decided to use giphy API [](https://developers.giphy.com/)
 ---
 
 ## Learnings
@@ -33,6 +35,8 @@ To solve this:
 3. press `esc` (escape)
 4. write `:wq` (write & quit)
 5. then press **enter**
+
+**To reverse custom domain**
 
 
 ---

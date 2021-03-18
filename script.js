@@ -62,6 +62,7 @@ form.addEventListener("submit", (event) => {
     const sign = starsign(data.sign)
     const day = data.day
     const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=${day}`;
+    const URL2 = "https://api.giphy.com/v1/gifs/random/?pduIuGlCw67hBvjSybp6vOMcpVHE4xGu";
 //    const URL2 = ``
     event.preventDefault();
 fetch(URL, {
@@ -88,6 +89,20 @@ fetch(URL, {
 // Second fetch will go here
 });
 
+const data2  ;
+fetch(URL2, {
+   method: 'POST',
+   body: JSON.stringify(data2),
+   headers: {"content-type": "application/json"}, 
+})
+.then(response => {
+    if (!response.ok) throw new Error(response.status);
+    return response.json()
+})
+.then(json2 => {
+    console.log(json2);
+})
+
 // Twinkle twinkle
 
 const starContainer = document.getElementById('star-container')
@@ -100,3 +115,4 @@ for (let i = 0; i < 100; i++) {
     starContainer.appendChild(element)
     element.setAttribute('class', 'star')
     }
+
