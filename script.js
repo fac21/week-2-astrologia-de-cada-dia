@@ -89,19 +89,19 @@ fetch(URL, {
 // Second fetch will go here
 });
 
-const data2  ;
-fetch(URL2, {
-   method: 'POST',
-   body: JSON.stringify(data2),
-   headers: {"content-type": "application/json"}, 
-})
-.then(response => {
-    if (!response.ok) throw new Error(response.status);
-    return response.json()
-})
-.then(json2 => {
-    console.log(json2);
-})
+// const data2  ;
+// fetch(URL2, {
+//    method: 'POST',
+//    body: JSON.stringify(data2),
+//    headers: {"content-type": "application/json"}, 
+// })
+// .then(response => {
+//     if (!response.ok) throw new Error(response.status);
+//     return response.json()
+// })
+// .then(json2 => {
+//     console.log(json2);
+// })
 
 // Twinkle twinkle
 
