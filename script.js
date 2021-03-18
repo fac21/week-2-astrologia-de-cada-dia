@@ -2,6 +2,10 @@
 const form = document.querySelector("form");
 const starsignHeader = document.getElementById("starsign-header")
 const description = document.getElementById("description")
+const moodP = document.getElementById("mood")
+const colourP = document.getElementById("colour")
+const luckyTimeP = document.getElementById("lucky-time")
+const luckyNumberP = document.getElementById("lucky-number")
 const output = document.getElementById("output")
 
 function returnToMain() {
@@ -75,7 +79,12 @@ fetch(URL, {
 })
 .then(json => { 
     starsignHeader.innerHTML = `Hey there, ${sign.charAt(0).toUpperCase()+sign.slice(1)}!`
-    description.innerHTML = `<b>${day.charAt(0).toUpperCase()+day.slice(1)} is looking like this:</b><br> ${json.description}!`
+    description.innerHTML = `<b>${day.charAt(0).toUpperCase()+day.slice(1)} is looking like this:</b><br> ${json.description}`
+    moodP.innerHTML = ` ${json.mood}`
+    colourP.innerHTML = ` ${json.color}`
+    colourP.style.color = `${json.color}`
+    luckyTimeP.innerHTML = ` ${json.lucky_time}`
+    luckyNumberP.innerHTML = ` ${json.lucky_number}`
     output.style.display = "block"
     console.log(json.lucky_time);
     console.log(json.lucky_number);
