@@ -1,5 +1,9 @@
 *{
     box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1rem;
+    font-weight: 400;
 }
 
 html { 
@@ -10,24 +14,87 @@ html {
     background-size: cover;
   }
 
-  header{
-      width: 100%;
-      height: 100vh;
+  body {
+      margin: 0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
   }
 
-  header > * {
-      position: absolute;
-      width: 50vw;
+ /* Reusable things I forgot the name lol */
+
+  .font-color-light {
+      color: rgb(241,250,238)
+  }
+
+  .font-color-dark {
+      color: rgb(0,48,73);
   }
 
   .abspos {
-      position: absolute;
-  }
+    position: absolute;
+}
 
   .centerflex{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .margin-top-sm {
+      margin-top: 0.6rem;
+  }
+
+/* element classes */ 
+
+input {
+    margin: 0.5rem 0;
+    color: black;
+}
+
+button {
+    margin-top: 0.5rem;
+}
+
+  header{
+      width: 100vw;
+      margin-top: 30vw;
+  }
+
+  .header-moon {
+      min-width: 300px;
+      max-width: 600px;
+      width: 50vw;
+  }
+
+  .header-logo {
+      height: 7vw;
+      min-height: 50px;
+      max-height: 80px;
+  }
+
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 25vh 0 1rem 0;
+    padding: 0.5rem;
+    width: 300px;
+    z-index: 5;
+  }
+  
+/* Media Queries */
+
+  @media (min-width: 1000px) {
+    header {
+        margin-top: 50vh;
+    }
+    .header-logo {
+        margin-bottom: 25vh;
+    }
+    .input-form {
+        margin: -5vh 0 0 0;
+        color: rgb(29,53,87);
+    }
   }
