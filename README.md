@@ -37,6 +37,6 @@ To solve this:
 5. then press **enter**
 
 **To reverse custom domain**
-
+gp
 
 ---
