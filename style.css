@@ -28,6 +28,10 @@ html {
       color: rgb(0,48,73);
   }
 
+  .font-md {
+      font-size: 1rem
+  }
+
   .font-lg {
       font-size: 1.5rem;
   }
@@ -47,16 +51,11 @@ html {
       margin-top: 0.6rem;
   }
 
+  .margin-bottom-sm {
+    margin-bottom: 0.6rem;
+}
+
 /* element classes */ 
-
-input {
-    margin: 0.5rem 0;
-    color: black;
-}
-
-button {
-    margin-top: 0.5rem;
-}
 
   header{
       width: 100vw;
@@ -91,19 +90,34 @@ button {
   
   /* Styling for output */
 
-  .output {
+  /* .output {
       display: none;
       padding: 5vh;
       top: 0;
       position: absolute;
-      height: 100%;
+      height: 90%;
       width: 100vw;
       background-color: rgba(241,250,238, 0.95);
       background-size: cover;
       z-index: 3;
       color: rgb(0,48,73);
       animation: fadeIn 1.5s ease-in-out;
-  }
+  } */
+
+  .output {
+    display: none;
+    padding: 5vh;
+    top: 2rem;
+    position: absolute;
+    height: 90%;
+    border-radius: 5%;
+    width: 50vw;
+    background-color: rgba(202,240,248, 0.95);
+    background-size: cover;
+    z-index: 3;
+    color: rgb(0,48,73);
+    animation: fadeIn 1.5s ease-in-out;
+}
 
   @keyframes fadeIn {
     0% {
@@ -132,9 +146,6 @@ button {
         margin-bottom: 25vh;
     }
     .input-form {
-        font-size: 1.05rem;
-        line-height: 1.5rem;
-        font-weight: 400;
         margin: -5vh 0 0 0;
         color: rgb(29,53,87);
         z-index: 2;
