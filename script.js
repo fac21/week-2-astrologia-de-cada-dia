@@ -61,9 +61,8 @@ form.addEventListener("submit", (event) => {
     const data = Object.fromEntries(formData)
     const sign = starsign(data.sign)
     const day = data.day
+    const mood = "grumpy"
     const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=${day}`;
-    const URL2 = "https://api.giphy.com/v1/gifs/random/?pduIuGlCw67hBvjSybp6vOMcpVHE4xGu";
-//    const URL2 = ``
     event.preventDefault();
 fetch(URL, {
     method: 'POST',
@@ -84,24 +83,26 @@ fetch(URL, {
     console.log(json.color);
     console.log(json.compatibility);
     console.log(json.description);
+    gifapi(json.mood);
     })
-    .catch((error) => console.error(error));
-// Second fetch will go here
+    .catch((error) => console.error(error))
 });
 
-// const data2  ;
-// fetch(URL2, {
-//    method: 'POST',
-//    body: JSON.stringify(data2),
-//    headers: {"content-type": "application/json"}, 
-// })
-// .then(response => {
-//     if (!response.ok) throw new Error(response.status);
-//     return response.json()
-// })
-// .then(json2 => {
-//     console.log(json2);
-// })
+
+function gifapi(signmood){ 
+const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${signmood}&limit=1`;
+fetch(URL2, {
+        method: 'GET',
+        headers: {"content-type": "application/json"}, 
+     })
+     .then(response => {
+         if (!response.ok) throw new Error(response.status);
+         return response.json()
+     })
+     .then(response => {
+         console.log(response.data.url)}) //this is the gif url we need to display!!!
+    .catch((error) => console.error(error))
+    }
 
 // Twinkle twinkle
 
