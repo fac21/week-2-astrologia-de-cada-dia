@@ -87,3 +87,16 @@ fetch(URL, {
     .catch((error) => console.error(error));
 // Second fetch will go here
 });
+
+// Twinkle twinkle
+
+const starContainer = document.getElementById('star-container')
+
+for (let i = 0; i < 100; i++) {
+    const element = document.createElement('div')
+    element.style.top=`${Math.random()*100}%`
+    element.style.left=`${Math.random()*100}%`
+    element.style.animation = `twinkle ${1+Math.random()*10}s ease-out infinite`
+    starContainer.appendChild(element)
+    element.setAttribute('class', 'star')
+    }
