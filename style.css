@@ -1,9 +1,9 @@
 *{
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
-    font-weight: 200;
     font-size: 1.05rem;
     line-height: 1rem;
+    font-weight: 400;
 }
 
 html { 
@@ -28,7 +28,7 @@ html {
   }
 
   .font-color-dark {
-
+      color: rgb(0,48,73);
   }
 
   .abspos {
@@ -40,6 +40,10 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+  .margin-top-sm {
+      margin-top: 0.6rem;
+  }
 
 /* element classes */ 
 
@@ -54,7 +58,7 @@ button {
 
   header{
       width: 100vw;
-      margin-top: 40vw;
+      margin-top: 30vw;
   }
 
   .header-moon {
@@ -74,7 +78,7 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 30vh 0 1rem 0;
+    margin: 25vh 0 1rem 0;
     padding: 0.5rem;
     width: 300px;
     z-index: 5;
@@ -82,11 +86,15 @@ button {
   
 /* Media Queries */
 
-  @media (min-width: 800px) {
+  @media (min-width: 1000px) {
     header {
         margin-top: 50vh;
     }
     .header-logo {
         margin-bottom: 25vh;
+    }
+    .input-form {
+        margin: -5vh 0 0 0;
+        color: rgb(29,53,87);
     }
   }
