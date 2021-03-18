@@ -117,20 +117,21 @@ html {
       animation: fadeIn 1.5s ease-in-out;
   } */
 
-  /* .output {
+  .output {
     display: none;
     padding: 5vh;
-    top: 25vh;
+    top: 0;
     position: absolute;
-    height: 50vh%;
-    border-radius: 5%;
-    width: 50vw;
+    height: 100vh;
+    /* border-radius: 5%; */
+    min-width: 100vw;
     background-color: rgb(174,224,241);
     background-size: cover;
     z-index: 3;
     color: rgb(0,48,73);
     animation: fadeIn 1.5s ease-in-out;
-} */
+
+}
 
   @keyframes fadeIn {
     0% {
