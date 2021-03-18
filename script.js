@@ -103,3 +103,17 @@ fetch(URL2, {
          console.log(response.data.url)}) //this is the gif url we need to display!!!
     .catch((error) => console.error(error))
     }
+
+// Twinkle twinkle
+
+const starContainer = document.getElementById('star-container')
+
+for (let i = 0; i < 100; i++) {
+    const element = document.createElement('div')
+    element.style.top=`${Math.random()*100}%`
+    element.style.left=`${Math.random()*100}%`
+    element.style.animation = `twinkle ${1+Math.random()*10}s ease-out infinite`
+    starContainer.appendChild(element)
+    element.setAttribute('class', 'star')
+    }
+

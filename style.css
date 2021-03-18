@@ -66,12 +66,14 @@ html {
       min-width: 300px;
       max-width: 600px;
       width: 50vw;
+      z-index: 2;
   }
 
   .header-logo {
       height: 7vw;
       min-height: 50px;
       max-height: 80px;
+      z-index: 2;
   }
 
   .input-form {
@@ -87,7 +89,18 @@ html {
     width: 300px;
     z-index: 2;
   }
-  
+
+  /* Styling for button */
+
+  button{
+    border-radius: 1rem;
+    padding:0.5rem;
+  }
+
+  button:hover{
+    background-color:rgb(21,62,118);
+    color:white;
+  }
   /* Styling for output */
 
   /* .output {
@@ -112,7 +125,7 @@ html {
     height: 90%;
     border-radius: 5%;
     width: 50vw;
-    background-color: rgba(202,240,248, 0.95);
+    background-color: rgb(174,224,241);
     background-size: cover;
     z-index: 3;
     color: rgb(0,48,73);
@@ -136,6 +149,35 @@ html {
     }
 }
 
+/* Twinkle twinkle */
+
+#star-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: 1;
+  }
+
+.star {
+    position: absolute;
+    display: inline-block;
+    line-height: 0;
+    border-radius: 50%;
+    height: 0.3vw;
+    width: 0.3vw;
+    margin: 0;
+    background-color: rgba(250,249,249, 1);
+  }
+  
+  @keyframes twinkle {
+    0%   { opacity: 1; }
+    5%  { opacity: 0.2; }
+    50% { opacity: 0.8; }
+    80%  { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
 /* Media Queries */
 
   @media (min-width: 1000px) {
@@ -143,7 +185,7 @@ html {
         margin-top: 50vh;
     }
     .header-logo {
-        margin-bottom: 25vh;
+        top: 30vh;
     }
     .input-form {
         margin: -5vh 0 0 0;
