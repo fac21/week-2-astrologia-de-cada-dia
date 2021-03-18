@@ -100,6 +100,6 @@ fetch(URL2, {
          return response.json()
      })
      .then(response => {
-         console.log(response.data.url)})
+         console.log(response.data.url)}) //this is the gif url we need to display!!!
     .catch((error) => console.error(error))
     }
