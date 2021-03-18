@@ -1,5 +1,16 @@
 
 const form = document.querySelector("form");
+const starsignHeader = document.getElementById("starsign-header")
+const description = document.getElementById("description")
+const output = document.getElementById("output")
+
+function returnToMain() {
+    output.style.animation = "fadeOut 1.5s ease-in-out"
+    setTimeout(function(){
+        output.style.animation = "fadeIn 1.5s ease-in-out"
+        output.style.display = "none"
+    },1500)
+}
 
 // Find starsign from Date of Birth user input
 function starsign(dob) {
@@ -48,6 +59,7 @@ function starsign(dob) {
 
 // Fetch data from API
 form.addEventListener("submit", (event) => {
+
     const formData = new FormData(form);
     const data = Object.fromEntries(formData)
     const sign = starsign(data.sign)
@@ -65,7 +77,9 @@ fetch(URL, {
     return response.json()
 })
 .then(json => { 
-    document.getElementById("testp").innerHTML = `Your lucky time is ${json.lucky_time}, and your lucky number is ${json.lucky_number}`
+    starsignHeader.innerHTML = `Hey there, ${sign.charAt(0).toUpperCase()+sign.slice(1)}!`
+    description.innerHTML = `<b>${day.charAt(0).toUpperCase()+day.slice(1)} is looking like this:</b><br> ${json.description}!`
+    output.style.display = "block"
     console.log(json.lucky_time);
     console.log(json.lucky_number);
     console.log(json.mood);
