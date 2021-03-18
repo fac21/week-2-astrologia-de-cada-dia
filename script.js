@@ -87,20 +87,32 @@ fetch(URL, {
     })
     .catch((error) => console.error(error));
 // Second fetch will go here
-
-const data2 = ;
-fetch(URL2, {
-   method: 'POST',
-   body: JSON.stringify(data2),
-   headers: {"content-type": "application/json"}, 
-})
-.then(response => {
-    if (!response.ok) throw new Error(response.status);
-    return response.json()
-})
-.then(json2 => {
-    console.log(json2);
-})
-
 });
+
+// const data2  ;
+// fetch(URL2, {
+//    method: 'POST',
+//    body: JSON.stringify(data2),
+//    headers: {"content-type": "application/json"}, 
+// })
+// .then(response => {
+//     if (!response.ok) throw new Error(response.status);
+//     return response.json()
+// })
+// .then(json2 => {
+//     console.log(json2);
+// })
+
+// Twinkle twinkle
+
+const starContainer = document.getElementById('star-container')
+
+for (let i = 0; i < 100; i++) {
+    const element = document.createElement('div')
+    element.style.top=`${Math.random()*100}%`
+    element.style.left=`${Math.random()*100}%`
+    element.style.animation = `twinkle ${1+Math.random()*10}s ease-out infinite`
+    starContainer.appendChild(element)
+    element.setAttribute('class', 'star')
+    }
 
