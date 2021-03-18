@@ -52,9 +52,6 @@ function starsign(dob) {
     if ((dobDay >= 19 && dobMonth === 2) || (dobDay <= 20 && dobMonth === 3)) {
         return "pisces"
     }
-    else {
-        console.log("you do not exist")
-    }
 }
 
 // Fetch data from API

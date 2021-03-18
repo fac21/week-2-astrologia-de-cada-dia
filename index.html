@@ -23,25 +23,25 @@
     <div>
     <label for="starsign">Your date of birth:
     </label>
-    <input id="starsign" type="date" name="sign">
+    <input class="margin-bottom-sm font-md font-color-dark" id="starsign" type="date" name="sign" required>
   </div>
 
   <div>
-    <label for="day" class="margin-top-sm">This reading is for:
-      </label>
-      <select id="day" name="day" class="margin-top-sm">
+    <label for="day">This reading is for:
+      </label><br>
+      <select id="day" name="day" class="margin-bottom-sm font-md font-color-dark">
         <option value="today">Today</option>
         <option value="tomorrow">Tomorrow</option>
         <option value="yesterday">Yesterday</option>  
 
     </select>
     </div>
-    <button type="submit">Submit</button>
+    <button class="margin-top-sm font-md font-color-dark" type="submit">Submit</button>
   </form>
   <section id="output" class="output font-lg">
     <h1 id="starsign-header" class="centerflex">Test header</h1>
     <p id="description">test text</p>
-    <button onclick="returnToMain()">Return</button>
+    <button class="margin-top-sm font-md font-color-dark" onclick="returnToMain()">Return</button>
   </section>
 </div>
   
