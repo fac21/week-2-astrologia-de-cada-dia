@@ -7,33 +7,32 @@
   <meta name="description" content="Astrología de cada día">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap');
+  </style> 
 </head>
 
-<body>
+<body class="centerflex">
   <header class="centerflex">
-    <img src="./fullmoon.png" alt="glowing full moon">
-    <div class="centerflex">
-      <img src="astrologia-logo.png" alt="Astrologia de Cada Dia logo"> 
-    </div>
+    <img class="header-moon abspos" src="./fullmoon.png" alt="glowing full moon">
+      <img class="header-logo abspos" src="astrologia-logo.png" alt="Astrologia de Cada Dia logo"> 
   </header>
-  
-  <div class="wrapper centerflex">
-  <div>
-  <p>Enter your details to below to see your results!</p>
-</div>
 
-  <form>
+
+  <form class="input-form font-color-light">
     <div>
-    <label for="starsign">Your sign</label>
+    <label for="starsign">Your star sign:
+    </label>
     <input id="starsign" type="text" name="sign">
   </div>
 
   <div>
-    <label for="day">Choose your reading for a specific day</label>
-    <select id="day" name="day">
-      <option value="today">Today</option>
-      <option value="tomorrow">Tomorrow</option>
-      <option value="yesterday">Yesterday</option>
+    <label for="day">This reading is for:
+      <select id="day" name="day">
+        <option value="today">Today</option>
+        <option value="tomorrow">Tomorrow</option>
+        <option value="yesterday">Yesterday</option>  
+      </label>
 
     </select>
     </div>
