@@ -9,18 +9,18 @@ Blow 'em away
 **Core Stories **
 As a user, I want to:
 
-[x]See an interesting mashup of different data
-    [x]text
-    [x]images
-[x]Input information to change the displayed result
-    [x]input date of birth
-    [x]input day you want the horoscope reading for
-[x]View the app on all of my devices
+[x] See an interesting mashup of different data
+    [x] text
+    [x] images
+[x] Input information to change the displayed result
+    [x] input date of birth
+    [x] input day you want the horoscope reading for
+[x] View the app on all of my devices
 
 
 **Stretch stories **
-[]As an impatient user, I want to see some indication that data is loading
-[]As a confused user, I want to be told when something goes wrong
+[] As an impatient user, I want to see some indication that data is loading
+[] As a confused user, I want to be told when something goes wrong
 
 ---
 
