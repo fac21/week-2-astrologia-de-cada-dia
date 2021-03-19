@@ -102,14 +102,14 @@ fetch(URL, {
     luckyTimeP.innerHTML = ` ${json.lucky_time}`
     luckyNumberP.innerHTML = ` ${json.lucky_number}`
     output.style.display = "block"
-    console.log(json.lucky_time);
-    console.log(json.lucky_number);
-    console.log(json.mood);
-    console.log(json.color);
-    console.log(json.compatibility);
-    console.log(json.description);
-    
-    const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${json.mood}&limit=1`;
+    gifapi(json.mood)
+    })
+    .catch((error) => console.error(error))
+});
+
+
+function gifapi(signMood){
+    const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${signMood}&limit=1`;
     fetch(URL2, {
             method: 'GET',
             headers: {"content-type": "application/json"}, 
@@ -128,38 +128,8 @@ fetch(URL, {
              img.src = response.data.image_original_url;
              console.log(img.src)
              giphy.appendChild(img)
-             
         })
-        .catch((error) => console.error(error))
-
-    })
-    .catch((error) => console.error(error))
-    
-
-    
-
-
-
-});
-
-
-// function gifapi(signMood){ 
-// const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${signMood}&limit=1`;
-// fetch(URL2, {
-//         method: 'GET',
-//         headers: {"content-type": "application/json"}, 
-//      })
-//      .then(response => {
-//          if (!response.ok) throw new Error(response.status);
-//          return response.json()
-//      })
-//      .then(response => {
-//          console.dir(response)
-//          console.log(response.data.image_original_url)}) //this is the gif url we need to display!!!
-//          giphy.innerHTML = `<img src="${response.data.image_original_url}">`
-//     .catch((error) => console.error(error))
-
-//     }
+}
 
 
 
