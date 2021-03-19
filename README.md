@@ -10,7 +10,7 @@ Blow 'em away
 As a user, I want to:
 
 [x] See an interesting mashup of different data
-    [x] text
+    [x] Text
     [x] images
 [x] Input information to change the displayed result
     [x] input date of birth
@@ -19,8 +19,8 @@ As a user, I want to:
 
 
 **Stretch stories **
-[] As an impatient user, I want to see some indication that data is loading
-[] As a confused user, I want to be told when something goes wrong
+[ ] As an impatient user, I want to see some indication that data is loading
+[ ] As a confused user, I want to be told when something goes wrong
 
 ---
 
