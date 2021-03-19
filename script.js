@@ -9,11 +9,26 @@ const luckyNumberP = document.getElementById("lucky-number")
 const output = document.getElementById("output")
 const giphy =document.getElementById("giphy");
 
+// Twinkle twinkle
+
+const starContainer = document.getElementById('star-container')
+
+for (let i = 0; i < 100; i++) {
+    const element = document.createElement('div')
+    element.style.top=`${Math.random()*100}%`
+    element.style.left=`${Math.random()*100}%`
+    element.style.animation = `twinkle ${1+Math.random()*10}s ease-out infinite`
+    starContainer.appendChild(element)
+    element.setAttribute('class', 'star')
+    }
+
+// Return button    
 function returnToMain() {
     output.style.animation = "fadeOut 1.5s ease-in-out"
     setTimeout(function(){
         output.style.animation = "fadeIn 1.5s ease-in-out"
         output.style.display = "none"
+        giphy.removeChild(giphy.firstChild)
     },1500)
 }
 
@@ -87,14 +102,14 @@ fetch(URL, {
     luckyTimeP.innerHTML = ` ${json.lucky_time}`
     luckyNumberP.innerHTML = ` ${json.lucky_number}`
     output.style.display = "block"
-    console.log(json.lucky_time);
-    console.log(json.lucky_number);
-    console.log(json.mood);
-    console.log(json.color);
-    console.log(json.compatibility);
-    console.log(json.description);
-    
-    const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${json.mood}&limit=1`;
+    gifapi(json.mood)
+    })
+    .catch((error) => console.error(error))
+});
+
+
+function gifapi(signMood){
+    const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${signMood}&limit=1`;
     fetch(URL2, {
             method: 'GET',
             headers: {"content-type": "application/json"}, 
@@ -108,53 +123,13 @@ fetch(URL, {
              console.log(response.data.image_original_url) //this is the gif url we need to display!!!
 
              var img = document.createElement("img");
+             img.style.height= `200px`
              console.log(img)
              img.src = response.data.image_original_url;
              console.log(img.src)
              giphy.appendChild(img)
-             
         })
-        .catch((error) => console.error(error))
-
-    })
-    .catch((error) => console.error(error))
-    
-
-    
+}
 
 
-
-});
-
-
-// function gifapi(signMood){ 
-// const URL2 = `https://api.giphy.com/v1/gifs/random?api_key=pduIuGlCw67hBvjSybp6vOMcpVHE4xGu&tag=${signMood}&limit=1`;
-// fetch(URL2, {
-//         method: 'GET',
-//         headers: {"content-type": "application/json"}, 
-//      })
-//      .then(response => {
-//          if (!response.ok) throw new Error(response.status);
-//          return response.json()
-//      })
-//      .then(response => {
-//          console.dir(response)
-//          console.log(response.data.image_original_url)}) //this is the gif url we need to display!!!
-//          giphy.innerHTML = `<img src="${response.data.image_original_url}">`
-//     .catch((error) => console.error(error))
-
-//     }
-
-// Twinkle twinkle
-
-const starContainer = document.getElementById('star-container')
-
-for (let i = 0; i < 100; i++) {
-    const element = document.createElement('div')
-    element.style.top=`${Math.random()*100}%`
-    element.style.left=`${Math.random()*100}%`
-    element.style.animation = `twinkle ${1+Math.random()*10}s ease-out infinite`
-    starContainer.appendChild(element)
-    element.setAttribute('class', 'star')
-    }
 
