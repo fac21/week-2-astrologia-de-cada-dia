@@ -6,25 +6,25 @@ Blow 'em away
 
 ---
 
-**Core Stories **
+### Core Stories 
 As a user, I want to:
 
-[x] See an interesting mashup of different data
-    [x] Text
-    [x] images
-[x] Input information to change the displayed result
-    [x] input date of birth
-    [x] input day you want the horoscope reading for
-[x] View the app on all of my devices
+- [x] See an interesting mashup of different data
+    - [x] Text
+    - [x] images
+- [x] Input information to change the displayed result
+    - [x] input date of birth
+    - [x] input day you want the horoscope reading for
+- [x] View the app on all of my devices
 
 
 **Stretch stories **
-[ ] As an impatient user, I want to see some indication that data is loading
-[ ] As a confused user, I want to be told when something goes wrong
+- [ ] As an impatient user, I want to see some indication that data is loading
+- [ ] As a confused user, I want to be told when something goes wrong
 
 ---
 
-## User Journey 
+### User Journey 
 
 We decided to create a website for people who are interested in astrology and astronomy. Our company name **astrologia de cada dia** in spanish means astrology every day. 
 
@@ -33,7 +33,7 @@ We decided to create a website for people who are interested in astrology and as
 
 ---
 
-## API 1
+### API 1
 
 The user is to input data which we will use to access the first api and use the response to access the second api. 
 
@@ -41,13 +41,13 @@ We searched for Horoscope API and came across [Rapid API](https://rapidapi.com/s
 
 ---
 
-## API 2
+### API 2
 
 We had lots of trouble accessing our chosen second API [](https://rapidapi.com/astronomyapi-astronomyapi-default/api/astronomy) as it required a URL. The github pages URL was not acceptable, so we tried using a custom domain. That didn't work and we had trouble reverting that change (from custom domain to github url). Finally we decided to use [giphy API](https://developers.giphy.com/) to display an image. We felt we had a lot of text on our response and that an image would be a better fit.
 
 ---
 
-## Learnings :tada:
+### Learnings :tada:
 
 We kept getting this message in the terminal when `git merge main`
 [Please enter a commit message to explain why this merge is necessary,
